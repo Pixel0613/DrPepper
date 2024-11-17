@@ -1,9 +1,11 @@
 /* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Playfair Display', serif; /* Elegant serif font for a wine theme */
     margin: 0;
     padding: 0;
-    background-image: url('https://www.agoda.com/wp-content/uploads/2019/03/Palace-of-Versailles_Paris_France_marble-courtyard.jpg');
+    background-image: url('https://img.freepik.com/premium-photo/there-is-picture-grunge-background-with-flowers-generative-ai_955925-8229.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -30,14 +32,15 @@ body {
 
 .nav-bar a {
     color: white;
-    padding: 15px 25px;
+    padding: 10px 20px; /* Reduced padding */
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 0.9rem; /* Slightly smaller font size */
 }
 
 .nav-bar a.active {
-    background-color: #910000;
+    background-color: #910000; /* Rich wine red */
 }
 
 .nav-bar a:hover {
@@ -46,50 +49,59 @@ body {
 
 /* Content Section */
 .content {
-    margin: 20px auto;
-    max-width: 600px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
+    margin: 20px auto; /* Moderate vertical spacing */
+    max-width: 600px; /* Compact width */
+    padding: 20px; /* Compact padding */
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque for better readability */
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
     text-align: center;
 }
 
 .content h1 {
-    color: #910000;
-    font-size: 2rem;
+    color: #910000; /* Wine red */
+    font-size: 2rem; /* Moderately large heading */
+    margin-bottom: 15px; /* Compact spacing */
 }
 
 .content p {
-    font-size: 1rem;
+    font-size: 1rem; /* Regular font size */
     margin-bottom: 20px;
+    color: #444;
 }
 
 .content form label {
     display: block;
-    margin: 10px 0 5px;
+    margin: 10px 0 5px; /* Compact spacing */
+    font-size: 1rem; /* Standard label size */
     font-weight: bold;
+    color: #555;
 }
 
 .content form input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 8px; /* Compact input box padding */
+    margin-bottom: 15px; /* Compact spacing between inputs */
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 5px; /* Subtle border radius */
+    font-size: 0.9rem; /* Slightly smaller font size */
     box-sizing: border-box;
 }
 
 .content form input[type="submit"] {
-    background-color: #910000;
+    background-color: #910000; /* Wine red */
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px 20px;
-    font-size: 1.2rem;
+    padding: 10px 20px; /* Compact button size */
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-family: 'Playfair Display', serif; /* Explicitly set the font */
 }
 
+
 .content form input[type="submit"]:hover {
-    background-color: #910000;
+    background-color: #7c0000; /* Darker wine red on hover */
 }
