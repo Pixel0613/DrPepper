@@ -4,16 +4,12 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 
-# Correct BASE_DIR to point to the project root
+# Base Directory (Project Root) 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))  # Go up one directory
 LSTM_DIR = os.path.join(BASE_DIR, 'LSTM_model')  # Path to LSTM_model folder
 
-# Debugging: Print directory paths
-print(f"BASE_DIR: {BASE_DIR}")
-print(f"LSTM_DIR: {LSTM_DIR}")
-
-# Corrected file paths
-catalog_file_path = os.path.join(LSTM_DIR, 'wines.csv')  # Update to the new wines.csv file
+# file paths for the trained data and wine catalogue
+catalog_file_path = os.path.join(LSTM_DIR, 'wines.csv')  
 training_data_path = os.path.join(LSTM_DIR, 'winequality-red.csv')
 model_path = os.path.join(LSTM_DIR, 'results', 'lstm_wine_quality_model.h5')
 
@@ -27,10 +23,7 @@ if not os.path.exists(catalog_file_path):
     raise FileNotFoundError(f"Catalog file not found at {catalog_file_path}. Please check the file path.")
 catalog = pd.read_csv(catalog_file_path)
 
-# Debugging: Print catalog columns
-print("Catalog Columns:", catalog.columns)
-
-# Clean and convert 'Current Price' to numeric
+# Clean and convert 'Current Price' to numeric values 
 catalog['Current Price'] = pd.to_numeric(catalog['Current Price'], errors='coerce')
 
 # Handle rows with invalid price values
@@ -38,7 +31,7 @@ if catalog['Current Price'].isnull().any():
     print("Warning: Non-numeric values found in 'Current Price'. These rows will be dropped.")
     catalog = catalog.dropna(subset=['Current Price'])
 
-# Scale catalog ratings by 1.5
+# Scale catalog ratings by 1.5 to match with the scales for red wine data ratings 
 catalog['scaled_rating'] = catalog['Rating'] * 1.5
 
 # Load the trained LSTM model
@@ -64,16 +57,16 @@ def predict_and_recommend(user_input, price):
 
     Parameters:
     user_input (list): User-provided features [alcohol, pH, sulphates, residual sugar, volatile acidity].
-    price (float): User-provided target price.
+    price (float): User-provided target price --> Will find wines with the closest price 
 
     Returns:
-    tuple: Predicted rating and a DataFrame with the top 3 recommended wines.
+    tuple: Predicted rating and a DataFrame with the top 3 recommended wines. --> Tie breakers are in the order of closest ratings, closest price, order in catalogue list
     """
     # Scale the user input
     scaled_input = scaler.transform([user_input])
-    scaled_input = np.expand_dims(scaled_input, axis=0)  # Add batch dimension
+    scaled_input = np.expand_dims(scaled_input, axis=0) 
     
-    # Predict the quality
+    # Predict the quality of the wine 
     predicted_scaled_rating = model.predict(scaled_input)[0][0]
 
     # Reverse the scaling if the model's output is scaled (0-1) to the original range (1-10)
@@ -84,14 +77,14 @@ def predict_and_recommend(user_input, price):
     # Find the closest matches in the catalog
     catalog['rating_diff'] = abs(catalog['scaled_rating'] - predicted_rating)
     catalog['price_diff'] = abs(catalog['Current Price'] - price)
-    recommendations = catalog.sort_values(by=['rating_diff', 'price_diff']).head(3)
-    recommendations['scaled_rating'] = recommendations['scaled_rating'].round(2)
+    recommendations = catalog.sort_values(by=['rating_diff', 'price_diff']).head(3) #Recommend the top 3 values
+    recommendations['scaled_rating'] = recommendations['scaled_rating'].round(2)  # Round rating value to the second decimal point 
     
     return predicted_rating, recommendations[['Wine Name', 'Current Price', 'scaled_rating']]
 
 if __name__ == "__main__":
-    # Example usage
-    user_input = [9.3, 3.3, 1.08, 2.3, 0.43]  # Replace with actual user input
+    # Example
+    user_input = [9.3, 3.3, 1.08, 2.3, 0.43]  # Sample user input 
     target_price = 100.0
     predicted_rating, recommendations = predict_and_recommend(user_input, target_price)
     print(f"Predicted Rating: {predicted_rating}")

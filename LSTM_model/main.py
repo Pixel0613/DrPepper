@@ -12,7 +12,7 @@ results_dir = 'results'
 os.makedirs(results_dir, exist_ok=True)
 
 # Load the red wine quality dataset
-file_path = 'winequality-red.csv'  # Ensure the file is in the same directory or provide the full path
+file_path = 'winequality-red.csv'  # File is in the same directory as default, change accordignly 
 data = pd.read_csv(file_path)
 
 # Select relevant features and the target variable
@@ -40,22 +40,16 @@ if os.path.exists(model_path):
     model = load_model(model_path)
 else:
     print("Training a new model...")
-    # Define the LSTM model
     model = Sequential()
     model.add(LSTM(units=50, return_sequences=True, input_shape=(X_train.shape[1], X_train.shape[2])))
     model.add(Dropout(0.2))
-
     model.add(LSTM(units=50, return_sequences=False))
     model.add(Dropout(0.2))
-
     model.add(Dense(units=1))
-
     # Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
-
     # Train the model
     model.fit(X_train, y_train, epochs=20, batch_size=32)
-
     # Save the trained model in the 'results' directory
     model.save(model_path)
     print(f"Model saved to {model_path}")
@@ -63,7 +57,7 @@ else:
 # Make predictions
 predictions = model.predict(X_test)
 
-# Plot the actual vs predicted wine quality
+# Plot the actual vs predicted wine quality 
 plt.plot(range(len(y_test)), y_test, color='blue', label='Actual Quality')
 plt.plot(range(len(predictions)), predictions, color='red', label='Predicted Quality')
 plt.title('Wine Quality Prediction (Using Selected Features)')
@@ -71,7 +65,7 @@ plt.xlabel('Samples')
 plt.ylabel('Quality')
 plt.legend()
 
-# Save the plot in the 'results' directory
+# Save the plot in the 'results' directory as a png file
 plot_path = os.path.join(results_dir, 'wine_quality_prediction_selected_features.png')
 plt.savefig(plot_path)
 print(f"Plot saved to {plot_path}")
