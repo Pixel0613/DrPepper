@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Recommendations - Results</title>
+    <link rel="stylesheet" href="{{ url_for('css_files', filename='style.css') }}">
+</head>
+<body>
+    <nav class="nav-container">
+        <ul class="nav-bar">
+            <li><a href="/" class="active">Back to Recommendations</a></li>
+        </ul>
+    </nav>
+    <section class="content">
+        <h1>Wine Recommendations</h1>
+        <p>Your Predicted Wine Quality: <strong>{{ predicted_rating }}</strong></p>
+        <h2>Recommended Wines:</h2>
+        <ul>
+            {% for wine in recommendations %}
+            <li>
+                <strong>{{ wine['Name'] }}</strong> - ${{ wine['Original Price'] }} 
+                (Scaled Rating: {{ wine['scaled_rating'] }})
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>
