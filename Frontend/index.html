@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Recommendations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container">
+        <ul class="nav-bar">
+            <li><a href="#" class="active">Recommendations</a></li>
+        </ul>
+    </nav>
+
+    <!-- Recommendations Section -->
+    <section class="content">
+        <h1>Wine Recommendations</h1>
+        <p>Enter details about your preferences to get personalized wine recommendations!</p>
+        <form action="/submit-recommendations" method="POST">
+            <label for="alcohol">Alcohol (%):</label>
+            <input type="number" id="alcohol" name="alcohol" step="0.01" placeholder="Enter alcohol percentage" required>
+
+            <label for="ph">pH Level:</label>
+            <input type="number" id="ph" name="ph" step="0.01" placeholder="Enter pH level" required>
+
+            <label for="sulphates">Sulphates:</label>
+            <input type="number" id="sulphates" name="sulphates" step="0.01" placeholder="Enter sulphates level" required>
+
+            <label for="residual_sugar">Residual Sugar (g/L):</label>
+            <input type="number" id="residual_sugar" name="residual_sugar" step="0.01" placeholder="Enter residual sugar" required>
+
+            <label for="volatile_acidity">Volatile Acidity:</label>
+            <input type="number" id="volatile_acidity" name="volatile_acidity" step="0.01" placeholder="Enter volatile acidity" required>
+
+            <input type="submit" value="Get Recommendations">
+        </form>
+    </section>
+</body>
+</html>
