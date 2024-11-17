@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.agoda.com/wp-content/uploads/2019/03/Palace-of-Versailles_Paris_France_marble-courtyard.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333;
+}
+
+/* Navigation Bar */
+.nav-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent for visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar li {
+    margin: 0;
+}
+
+.nav-bar a {
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-bar a.active {
+    background-color: #910000;
+}
+
+.nav-bar a:hover {
+    background-color: #555;
+}
+
+/* Content Section */
+.content {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content h1 {
+    color: #910000;
+    font-size: 2rem;
+}
+
+.content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.content form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.content form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.content form input[type="submit"] {
+    background-color: #910000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.content form input[type="submit"]:hover {
+    background-color: #910000;
+}
