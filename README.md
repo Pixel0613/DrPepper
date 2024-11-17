@@ -42,3 +42,9 @@ All the steps you need to get your personalized wine recommendations
 ### How to use La Cantina Bella
 Simply enter the the five wine attributes listed above with your designated price, and our model will create an estiamte of the quality of wine you want. 
 You will be provided with three recommendations that closely match your designated quality and price. 
+
+##Sources used 
+
+Red Wine Quality databse by UCI Machine learning: https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009
+
+Vivino Catalogue: https://www.vivino.com/US-WI/en/  (Names, Prices, and Ratings of Red Wines were scraped)
