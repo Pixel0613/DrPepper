@@ -37,4 +37,8 @@ All the steps you need to get your personalized wine recommendations
 ### Prerequisites
 1. First, open your terminal and run this command: git clone https://github.com/Pixel0613/DrPepper
 2. Second run the following command to install all the required dependencies: pip install -r requirements.txt
-3. 
+3. Now you can run the Cantina Bella by running the following command: python app.py
+
+### How to use La Cantina Bella
+Simply enter the the five wine attributes listed above with your designated price, and our model will create an estiamte of the quality of wine you want. 
+You will be provided with three recommendations that closely match your designated quality and price. 
