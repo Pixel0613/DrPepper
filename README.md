@@ -1,4 +1,4 @@
-# \[Cantina Bella] 🍷
+# \Cantina Bella 🍷
 : Beautiful Cellar, Lovely Wine Cellar
 
 ### Team Members
