@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wine Recommendations</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css_files/style.css">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -33,6 +33,9 @@
 
             <label for="volatile_acidity">Volatile Acidity:</label>
             <input type="number" id="volatile_acidity" name="volatile_acidity" step="0.01" placeholder="Enter volatile acidity" required>
+
+            <label for="price">Target Price ($):</label>
+            <input type="number" id="price" name="price" step="0.01" placeholder="Enter target price" required>
 
             <input type="submit" value="Get Recommendations">
         </form>

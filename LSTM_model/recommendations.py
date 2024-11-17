@@ -4,12 +4,27 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 
-# Define file paths
-catalog_file_path = 'wines.csv'  # Path to the wine catalog
-model_path = 'results/lstm_wine_quality_model.h5'  # Path to the trained model
-training_data_path = 'winequality-red.csv'  # Path to the training dataset
+# Correct BASE_DIR to point to the project root
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))  # Go up one directory
+LSTM_DIR = os.path.join(BASE_DIR, 'LSTM_model')  # Path to LSTM_model folder
+
+# Debugging: Print directory paths
+print(f"BASE_DIR: {BASE_DIR}")
+print(f"LSTM_DIR: {LSTM_DIR}")
+
+# Corrected file paths
+catalog_file_path = os.path.join(LSTM_DIR, 'wines.csv')
+training_data_path = os.path.join(LSTM_DIR, 'winequality-red.csv')
+model_path = os.path.join(LSTM_DIR, 'results', 'lstm_wine_quality_model.h5')
+
+# Debugging: Print the constructed file paths
+print(f"Catalog File Path: {catalog_file_path}")
+print(f"Training Data Path: {training_data_path}")
+print(f"Model Path: {model_path}")
 
 # Load the wine catalog
+if not os.path.exists(catalog_file_path):
+    raise FileNotFoundError(f"Catalog file not found at {catalog_file_path}. Please check the file path.")
 catalog = pd.read_csv(catalog_file_path)
 
 # Debugging: Print catalog columns
@@ -36,7 +51,10 @@ if not os.path.exists(model_path):
 model = load_model(model_path)
 
 # Load and prepare the training dataset
+if not os.path.exists(training_data_path):
+    raise FileNotFoundError(f"Training data not found at {training_data_path}. Please check the file path.")
 training_data = pd.read_csv(training_data_path)
+
 features = ['alcohol', 'pH', 'sulphates', 'residual sugar', 'volatile acidity']
 scaler = MinMaxScaler(feature_range=(0, 1))  # Only scale the feature columns
 X_scaled = scaler.fit_transform(training_data[features].values)
@@ -75,25 +93,10 @@ def predict_and_recommend(user_input, price):
     return predicted_rating, recommendations[['Name', 'Original Price', 'scaled_rating']]
 
 if __name__ == "__main__":
-    # Collect user input
-    print("Enter the wine characteristics:")
-    try:
-        alcohol = float(input("Alcohol: "))
-        pH = float(input("pH: "))
-        sulphates = float(input("Sulphates: "))
-        residual_sugar = float(input("Residual Sugar: "))
-        volatile_acidity = float(input("Volatile Acidity: "))
-        price = float(input("Target Price: "))
-    except ValueError:
-        print("Invalid input. Please enter numeric values for all fields.")
-        exit(1)
-    
-    user_features = [alcohol, pH, sulphates, residual_sugar, volatile_acidity]
-    
-    # Predict and recommend
-    predicted_rating, recommendations = predict_and_recommend(user_features, price)
-    
-    # Display the results
-    print(f"\nPredicted Wine Quality (original scale): {predicted_rating:.2f}")
-    print("\nRecommended Wines:")
-    print(recommendations.to_string(index=False))
+    # Example usage
+    user_input = [9.3, 3.3, 1.08, 2.3, 0.43]  # Replace with actual user input
+    target_price = 100.0
+    predicted_rating, recommendations = predict_and_recommend(user_input, target_price)
+    print(f"Predicted Rating: {predicted_rating}")
+    print("Recommendations:")
+    print(recommendations)
