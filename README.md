@@ -1,4 +1,5 @@
-# \[Wine Reccomender\]
+# \[Cantina Bella] 🍷
+: Beautiful Cellar, Lovely Wine Cellar
 
 ### Team Members
 - Alex Lee (Project Lead)
