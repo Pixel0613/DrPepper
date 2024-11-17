@@ -6,10 +6,29 @@
 - Donghyun Kim
 
 ### Project Description
-Describe the goal of your project here.
+
+Happy early Thanksgiving and Christmas 🥧🎄! With the holiday season approaching to us, our goal is to make a smart and personalized wine recommendation system that helps you to find the perfect bottle for your Thanksgiving gatherings, Christmas dinner, or festival celebrations! By using ML LSTM model and actual data from the vivino.com, our web recommends wine based on your taste preferences and budget, ensuring your holiday gatherings are unforgettable.
+
+Whether you're hosting a Thanksgiving feast or searching for the perfect gift for a wine lover this Christmas, our Wine Recommendation System makes it easy to find the best wines tailored to your needs. Simply input your preferences for six key factors:
+
+- Alcohol (%)
+- pH Level
+- Sulphates
+- Residual Sugar (g/L)
+- Volatile Acidity
+- Target Price ($)
+
+Based on your inputs, our system predicts your ideal wine quality score and provides three highly-rated wine recommendations, including names, prices, and ratings sourced from Vivino.
+
 
 ### Built With
-- List any languages, frameworks, tools, etc. that your project uses here
+
+- Python: The core logic and backend of our wine recommendation system are built using Python, leveraging its robust libraries and frameworks.
+- HTML & CSS: The user interface is crafted using HTML and CSS to provide a clean and user-friendly experience, making it easy for users to input their preferences and view wine recommendations.
+- LSTM Model: We utilized a Long Short-Term Memory (LSTM) model for the machine learning process to predict wine quality based on user inputs. This deep learning model excels in identifying patterns and delivering accurate quality scores.
+- Flask: The Flask framework serves as the web application backend, seamlessly connecting the Python logic with the frontend. It handles user inputs, prediction processing, and dynamically displays results in the web interface.
+- Playwright Web Scraper: For real-time wine recommendations, we use Playwright to scrape Vivino.com for wine details, including names, prices, and ratings, ensuring users receive the most relevant and up-to-date suggestions.
+
 
 ## Getting Started
 This is where you give instructions on how to run your project
