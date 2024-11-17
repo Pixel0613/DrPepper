@@ -1,30 +1,122 @@
-Name,Discount Price,Original Price,Rating
-Barrett & Barrett Cabernet Sauvignon 2017,N/A,$136.37 ,3.5
-user image,N/A,$70.12 ,3.1
-user image,N/A,$14.41 ,3.2
-Beau Vigne Owner's Reserve Guest Cottage Cabernet Sauvignon 2021,N/A,$50.05 ,3.1
-Caymus Vineyards Special Selection Cabernet Sauvignon 2019,N/A,$22.73 ,4.7
-Stag's Leap Wine Cellars CASK 23 Cabernet Sauvignon 2021,N/A,$114.27 ,4.3
-Shafer Hillside Select Cabernet Sauvignon 2019,N/A,$169.69 ,4.9
-Caymus Vineyards Cabernet Sauvignon 2022,N/A,$103.85 ,3.2
-Stag's Leap Wine Cellars FAY Cabernet Sauvignon 2021,N/A,$132.66 ,3.1
-Paul Hobbs Cabernet Sauvignon 2021,N/A,$99.76 ,3.2
-Morca Touran 2016,N/A,$120.06 ,4.1
-Robert Mondavi Winery To Kalon Vineyard Reserve Cabernet Sauvignon 2017,N/A,$14.10 ,4.5
-Far Niente Cabernet Sauvignon 2021,N/A,$112.67 ,4
-Dominus (Christian Moueix) 2011,N/A,$121.08 ,4.3
-Sarah Francis Sage Ridge Vineyard Cabernet Sauvignon 2019,N/A,$191.78 ,4.4
-Bodegas El Nido Clio 2021,N/A,$188.97 ,5
-Kosta Browne Sonoma Coast Pinot Noir 2021,N/A,$52.38 ,3
-Revana Terroir Series Cabernet Sauvignon 2020,N/A,$24.22 ,3.7
-Bodegas Ateca Atteca Armas Garnacha Old Vines 2021,N/A,$132.63 ,3.4
-user image,N/A,$88.56 ,3.7
-user image,N/A,$18.89 ,4.5
-Shafer One Point Five Cabernet Sauvignon 2021,N/A,$13.52 ,4.1
-Roger Sabon Ch?teauneuf-du-Pape Le Secret Des Sabon 2020,N/A,$79.92 ,4.1
-Ornellaia Bolgheri Superiore 2021,N/A,$35.56 ,4.5
-Cornell Courtship Cabernet Sauvignon 2019,N/A,$148.24 ,4.2
-Stag's Leap Wine Cellars S.L.V. Cabernet Sauvignon 2021,N/A,$143.66 ,3.8
-Antinori Tignanello 2021,N/A,$107.99 ,4.7
-Belle Glos Clark & Telephone Vineyard Pinot Noir 2020,N/A,$144.61 ,4.7
-Belle Glos Dairyman Vineyard Pinot Noir 2022,N/A,$71.97 ,4.8
+Wine Name,Rating,Current Price
+Barrett & Barrett Cabernet Sauvignon 2017,4.6,179.99
+Beau Vigne Owner's Reserve Guest Cottage Cabernet Sauvignon 2021,4.6,199.99
+Caymus Vineyards Special Selection Cabernet Sauvignon 2019,4.6,219.99
+Stag's Leap Wine Cellars CASK 23 Cabernet Sauvignon 2021,4.6,314.99
+Shafer Hillside Select Cabernet Sauvignon 2019,4.6,350.0
+Morca Touran 2016,4.5,116.99
+Robert Mondavi Winery To Kalon Vineyard Reserve Cabernet Sauvignon 2017,4.5,149.99
+Stag's Leap Wine Cellars FAY Cabernet Sauvignon 2021,4.5,189.99
+Paul Hobbs Cabernet Sauvignon 2021,4.5,99.99
+Caymus Vineyards Cabernet Sauvignon 2022,4.5,79.99
+Revana Terroir Series Cabernet Sauvignon 2020,4.5,89.99
+Bodegas Ateca Atteca Armas Garnacha Old Vines 2021,4.5,54.99
+Sarah Francis Sage Ridge Vineyard Cabernet Sauvignon 2019,4.5,125.0
+Far Niente Cabernet Sauvignon 2021,4.5,118.99
+Dominus Dominus (Christian Moueix) 2011,4.5,299.97
+Shafer One Point Five Cabernet Sauvignon 2021,4.5,125.0
+Kosta Browne Sonoma Coast Pinot Noir 2021,4.5,110.0
+Bodegas El Nido Clio 2021,4.5,54.99
+Roger Sabon Châteauneuf-du-Pape Le Secret Des Sabon 2020,4.5,179.99
+Cornell Courtship Cabernet Sauvignon 2019,4.5,79.99
+Stag's Leap Wine Cellars S.L.V. Cabernet Sauvignon 2021,4.5,244.99
+Antinori Tignanello 2021,4.5,189.99
+Ornellaia Bolgheri Superiore 2021,4.5,299.99
+Lazzeretti Brunello di Montalcino 2019,4.4,36.99
+Dolum Estates Cask 3 Cabernet Sauvignon 2022,4.4,59.99
+Marchesi de' Cordano Trinita´ Montepulciano d'Abruzzo Riserva 2019,4.4,24.99
+Quixote Cabernet Sauvignon 2018,4.4,69.99
+Stag's Leap Wine Cellars Battuello Vineyard Cabernet Sauvignon 2018,4.4,69.99
+Stag's Leap Wine Cellars Battuello Vineyard Cabernet Sauvignon 2019,4.4,59.99
+Beringer Private Reserve Cabernet Sauvignon 2017,4.4,119.99
+Belle Glos Dairyman Vineyard Pinot Noir 2022,4.4,34.95
+Portfolio Limited Edition 2018,4.4,175.0
+Beau Vigne Reserve Cabernet Sauvignon 2021,4.4,125.0
+Caro (Catena and Rothschild) Caro 2020,4.4,59.99
+Zenato Amarone della Valpolicella Classico 2018,4.4,54.99
+ZD Wines Cabernet Sauvignon 2021,4.4,59.96
+Selah Cabernet Sauvignon 2017,4.4,99.99
+Gandona Encosta Estate Cabernet Sauvignon 2018,4.4,54.99
+Beau Vigne Romeo Cabernet Sauvignon 2021,4.4,54.99
+Château St. Jean Cinq Cépages 2016,4.4,81.99
+Ilatium Morini Campo León Amarone della Valpolicella 2018,4.4,39.99
+San Marzano 60 Sessantanni Old Vines Primitivo di Manduria 2019,4.4,32.99
+Cignomoro 80 Vecchie Vigne Primitivo di Manduria Old Vines 2021,4.4,27.99
+Silver Oak Alexander Valley Cabernet Sauvignon 2019,4.4,79.99
+Cignomoro 6 Anime Puglia Rosso 2022,4.4,29.99
+Atalaya Alaya Tierra 2020,4.4,43.99
+Meyer Family Cellars Le Bon Bon 2017,4.4,69.99
+Beau Vigne Cult Cabernet Sauvignon 2022,4.4,44.99
+Gamba Vineyards and Winery Messana Vineyard Zinfandel 2021,4.4,23.99
+Coleman Vineyards Old Block Pommard 2021,4.4,24.99
+On Q Appassionata Cabernet Sauvignon 2022,4.4,49.99
+Cartuxa Évora Reserva Tinto 2018,4.4,39.99
+La Rioja Alta Viña Ardanza Reserva 2017,4.4,44.99
+Stag's Leap Wine Cellars ARTEMIS Cabernet Sauvignon 2021,4.4,79.99
+Austin Hope Austin Hope Cabernet Sauvignon 2021,4.4,56.0
+Noble Wines Petite Sirah 2005,4.3,19.99
+Zialena Reserve Zinfandel 2020,4.3,24.99
+La Sirena Pirate TreasuRed 2019,4.3,49.99
+Noble Wines Cabernet Sauvignon 2006,4.3,44.99
+Noble Wines Cabernet Sauvignon 2015,4.3,39.99
+Zialena Reserve Zinfandel 2019,4.3,24.99
+Tenuta Santodeno Sangiovese Appassimento 2023,4.3,16.99
+North Coast Wine Co. Outerbound Pinot Noir 2021,4.3,33.99
+Rombauer Vineyards Zinfandel 2021,4.3,34.99
+Pine Ridge Napa Valley Cabernet Sauvignon 2022,4.3,59.99
+Sasso di Sole Brunello di Montalcino 2019,4.3,39.99
+Dolum Estates Cask 28 Cabernet Sauvignon 2022,4.3,39.99
+Typhon Estates {SOLIS} Cabernet Sauvignon 2021,4.3,44.99
+Degani Amarone della Valpolicella Classico 2017,4.3,39.99
+Typhon Estates {LUMEN} Cabernet Sauvignon 2021,4.3,39.99
+Modus Operandi Vicarious Cabernet Sauvignon 2020,4.3,34.99
+Brunelli Amarone della Valpolicella Classico 2021,4.3,39.99
+Kukeri Cuvée Ivonne Pinot Noir 2022,4.3,24.99
+Rinforzo Primitivo Salento 2022,4.3,24.99
+Meadowcroft Cabernet Sauvignon Mount Veeder 2021,4.3,44.99
+Cerro Cabernet Sauvignon 2020,4.3,44.99
+Adelaida Adelaida District Cabernet Sauvignon 2022,4.3,36.99
+Jaffe Estate Transformation Blend 2019,4.3,34.99
+Casa Vinicola Bennati Amarone della Valpolicella 2020,4.3,34.99
+Venge Vineyards Scout's Honor Red 2022,4.3,39.99
+Justin Isosceles 2020,4.3,59.99
+Juan Gil Jumilla Blue Label 2021,4.3,42.99
+Joseph Phelps Vineyards Cabernet Sauvignon 2021,4.3,82.99
+On Q Cabernet Sauvignon 2022,4.3,39.99
+Verdon Estate Reserve No.5 Cabernet Sauvignon 2022,4.3,39.99
+Frank Family Cabernet Sauvignon 2021,4.3,54.99
+Beau Vigne Legacy Cabernet Sauvignon 2021,4.3,44.99
+Roar Pinot Noir 2022,4.3,49.99
+Kukeri Cabernet Sauvignon 2022,4.3,32.99
+Marchesi de' Cordano Aida Montepulciano d'Abruzzo 2021,4.3,17.99
+Meadowcroft Cabernet Sauvignon Napa Valley 2022,4.3,32.99
+Red Schooner Voyage 11 N.V.,4.3,35.99
+Morca Godina Garnacha 2021,4.3,32.99
+San Marzano 62 Anniversario Primitivo di Manduria Riserva 2018,4.3,34.99
+Ovis Cabernet Sauvignon 2019,4.3,39.99
+Flight Wine Company Thread Feathers Rutherford Cabernet Sauvignon 2022,4.3,34.99
+Our Lady of Guadalupe Pinot Noir 2022,4.3,84.99
+Sequoia Grove Cabernet Sauvignon 2021,4.3,47.99
+Thurlow Cellars Pit Viper Cabernet Sauvignon 2021,4.3,44.99
+Aviara Prana Block M5 Cabernet Sauvignon 2020,4.3,44.99
+Beau Vigne Reserve Proprietary Red 2021,4.3,44.99
+Thurlow Cellars Kingsnake Cabernet Sauvignon 2021,4.3,39.99
+Beau Vigne Reserve Proprietary Red 2022,4.3,54.99
+Thurlow Cellars Copperhead Cabernet Sauvignon 2021,4.3,44.99
+Degani Amarone della Valpolicella Classico 2018,4.3,39.99
+St. Supéry Cabernet Sauvignon 2019,4.3,49.99
+Duhig Cabernet Sauvignon 2019,4.3,125.0
+Brunelli Amarone della Valpolicella Classico 2020,4.3,36.99
+Buena Vista Chateau Buena Vista Cabernet Sauvignon Napa Valley 2020,4.3,39.99
+Noble Wines Cabernet Sauvignon 2010,4.3,39.99
+Flight Wine Company Thread Feathers Howell Mountain Cabernet Sauvignon 2022,4.3,34.99
+Sequum MIXT 2021,4.3,26.99
+Chateau Montelena Napa Valley Cabernet Sauvignon 2019,4.3,74.99
+Shafer TD9 2021,4.3,79.99
+Red Schooner Transit 3 N.V.,4.3,36.99
+Ranchos de Ontiveros Native 9 Pinot Noir 2012,4.3,27.99
+Tinazzi Ca' de' Rocchi Amarone della Valpolicella La Bastia 2019,4.3,39.99
+Guerrieri Guerriero della Terra 2021,4.3,34.99
+Grassi Mezzo Mezzo 2021,4.3,34.99
+Ehlers Estate Cabernet Sauvignon 2020,4.3,39.99
+The Hess Collection Lion Tamer Napa Valley Red Blend 2021,4.3,52.99

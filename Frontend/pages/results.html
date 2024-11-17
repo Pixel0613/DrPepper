@@ -19,8 +19,8 @@
         <ul>
             {% for wine in recommendations %}
             <li>
-                <strong>{{ wine['Name'] }}</strong> - ${{ wine['Original Price'] }} 
-                (Scaled Rating: {{ wine['scaled_rating'] }})
+                <strong>{{ wine['Wine Name'] }}</strong> - ${{ wine['Current Price'] }} 
+                (Rating: {{ wine['scaled_rating'] }})
             </li>
             {% endfor %}
         </ul>

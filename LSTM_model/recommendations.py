@@ -13,7 +13,7 @@ print(f"BASE_DIR: {BASE_DIR}")
 print(f"LSTM_DIR: {LSTM_DIR}")
 
 # Corrected file paths
-catalog_file_path = os.path.join(LSTM_DIR, 'wines.csv')
+catalog_file_path = os.path.join(LSTM_DIR, 'wines.csv')  # Update to the new wines.csv file
 training_data_path = os.path.join(LSTM_DIR, 'winequality-red.csv')
 model_path = os.path.join(LSTM_DIR, 'results', 'lstm_wine_quality_model.h5')
 
@@ -30,17 +30,13 @@ catalog = pd.read_csv(catalog_file_path)
 # Debugging: Print catalog columns
 print("Catalog Columns:", catalog.columns)
 
-# Clean and convert 'Original Price' to numeric
-catalog['Original Price'] = catalog['Original Price'].str.replace('$', '', regex=False)
-catalog['Original Price'] = pd.to_numeric(catalog['Original Price'], errors='coerce')
+# Clean and convert 'Current Price' to numeric
+catalog['Current Price'] = pd.to_numeric(catalog['Current Price'], errors='coerce')
 
 # Handle rows with invalid price values
-if catalog['Original Price'].isnull().any():
-    print("Warning: Non-numeric values found in 'Original Price'. These rows will be dropped.")
-    catalog = catalog.dropna(subset=['Original Price'])
-
-# Ensure all values are now numeric
-print("Cleaned and converted 'Original Price' to numeric.")
+if catalog['Current Price'].isnull().any():
+    print("Warning: Non-numeric values found in 'Current Price'. These rows will be dropped.")
+    catalog = catalog.dropna(subset=['Current Price'])
 
 # Scale catalog ratings by 1.5
 catalog['scaled_rating'] = catalog['Rating'] * 1.5
@@ -87,10 +83,11 @@ def predict_and_recommend(user_input, price):
 
     # Find the closest matches in the catalog
     catalog['rating_diff'] = abs(catalog['scaled_rating'] - predicted_rating)
-    catalog['price_diff'] = abs(catalog['Original Price'] - price)
+    catalog['price_diff'] = abs(catalog['Current Price'] - price)
     recommendations = catalog.sort_values(by=['rating_diff', 'price_diff']).head(3)
+    recommendations['scaled_rating'] = recommendations['scaled_rating'].round(2)
     
-    return predicted_rating, recommendations[['Name', 'Original Price', 'scaled_rating']]
+    return predicted_rating, recommendations[['Wine Name', 'Current Price', 'scaled_rating']]
 
 if __name__ == "__main__":
     # Example usage
