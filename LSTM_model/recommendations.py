@@ -13,11 +13,6 @@ catalog_file_path = os.path.join(LSTM_DIR, 'wines.csv')
 training_data_path = os.path.join(LSTM_DIR, 'winequality-red.csv')
 model_path = os.path.join(LSTM_DIR, 'results', 'lstm_wine_quality_model.h5')
 
-# Debugging: Print the constructed file paths
-print(f"Catalog File Path: {catalog_file_path}")
-print(f"Training Data Path: {training_data_path}")
-print(f"Model Path: {model_path}")
-
 # Load the wine catalog
 if not os.path.exists(catalog_file_path):
     raise FileNotFoundError(f"Catalog file not found at {catalog_file_path}. Please check the file path.")
@@ -31,7 +26,7 @@ if catalog['Current Price'].isnull().any():
     print("Warning: Non-numeric values found in 'Current Price'. These rows will be dropped.")
     catalog = catalog.dropna(subset=['Current Price'])
 
-# Scale catalog ratings by 1.5 to match with the scales for red wine data ratings 
+# Scale catalog ratings by 1.5 to match with the scales for the red wine data quality values
 catalog['scaled_rating'] = catalog['Rating'] * 1.5
 
 # Load the trained LSTM model
@@ -45,7 +40,7 @@ if not os.path.exists(training_data_path):
 training_data = pd.read_csv(training_data_path)
 
 features = ['alcohol', 'pH', 'sulphates', 'residual sugar', 'volatile acidity']
-scaler = MinMaxScaler(feature_range=(0, 1))  # Only scale the feature columns
+scaler = MinMaxScaler(feature_range=(0, 1))  # We'll only scale the columns of the features that we are using. 
 X_scaled = scaler.fit_transform(training_data[features].values)
 
 # Ensure target values (quality) remain in the original scale (1-10)
@@ -53,10 +48,10 @@ y = training_data['quality'].values  # Keep original range for training
 
 def predict_and_recommend(user_input, price):
     """
-    Predict wine quality and recommend similar wines from the catalog.
+    Predict the wine quality the user wants and recommend wines from the catalog.
 
     Parameters:
-    user_input (list): User-provided features [alcohol, pH, sulphates, residual sugar, volatile acidity].
+    user_input (list): User-provided features (alcohol, pH, sulphates, residual sugar, volatile acidity)
     price (float): User-provided target price --> Will find wines with the closest price 
 
     Returns:
@@ -74,7 +69,7 @@ def predict_and_recommend(user_input, price):
     max_quality = training_data['quality'].max()
     predicted_rating = predicted_scaled_rating * (max_quality - min_quality) + min_quality
 
-    # Find the closest matches in the catalog
+    # Find the closest matches in the catalog --> order of tie breakers are closest rating, closest price, and then order in list
     catalog['rating_diff'] = abs(catalog['scaled_rating'] - predicted_rating)
     catalog['price_diff'] = abs(catalog['Current Price'] - price)
     recommendations = catalog.sort_values(by=['rating_diff', 'price_diff']).head(3) #Recommend the top 3 values

@@ -1,13 +1,12 @@
 from flask import Flask, render_template, request, send_from_directory
 import pandas as pd
 import numpy as np
-from LSTM_model.recommendations import predict_and_recommend  # Adjust import based on your folder
+from LSTM_model.recommendations import predict_and_recommend  
 
-# Create Flask app
 app = Flask(
     __name__,
-    template_folder='Frontend/pages',  # HTML files are in Frontend/pages
-    static_folder='Frontend/css_files'  # CSS files are in Frontend/css_files
+    template_folder='Frontend/pages',  # HTML files are in the Frontend/pages  folder
+    static_folder='Frontend/css_files'  # CSS file(s) is(are) in the Frontend/css_files
 )
 
 @app.route('/')

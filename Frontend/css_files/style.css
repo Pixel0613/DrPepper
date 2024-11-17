@@ -3,16 +3,18 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://www.agoda.com/wp-content/uploads/2019/03/Palace-of-Versailles_Paris_France_marble-courtyard.jpg');
+    background-image: url('https://img.freepik.com/premium-photo/there-is-picture-grunge-background-with-flowers-generative-ai_955925-8229.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #f8f8f8; /* Fallback color */
+    min-height: 100vh;
     color: #333;
 }
 
 /* Navigation Bar */
 .nav-container {
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent for visibility */
+    background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -49,22 +51,43 @@ body {
     margin: 20px auto;
     max-width: 600px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
 
 .content h1 {
     color: #910000;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.content p {
-    font-size: 1rem;
+.content h2, .content p {
+    color: #555;
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.content ul li {
+    background: rgba(255, 240, 240, 0.8);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Form Input */
 .content form label {
     display: block;
     margin: 10px 0 5px;
@@ -91,5 +114,24 @@ body {
 }
 
 .content form input[type="submit"]:hover {
+    background-color: #7c0000;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
     background-color: #910000;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #7c0000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
