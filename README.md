@@ -8,9 +8,9 @@
 
 ### Project Description
 
-Happy early Thanksgiving and Christmas 🥧🎄! With the holiday season approaching to us, our goal is to make a smart and personalized wine recommendation system that helps you to find the perfect bottle for your Thanksgiving gatherings, Christmas dinner, or festival celebrations! By using ML LSTM model and actual data from the vivino.com, our web recommends wine based on your taste preferences and budget, ensuring your holiday gatherings are unforgettable.
+Happy early Thanksgiving and Christmas 🥧🎄! With the holiday season approaching to us, our goal is to make a smart and personalized wine recommendation system that helps you to find the perfect bottle for your Thanksgiving gatherings, Christmas dinner, or festival celebrations! By using ML LSTM model and actual data from the vivino.com, our Cantina Bella recommends wine based on your taste preferences and budget, ensuring your holiday gatherings are unforgettable.
 
-Whether you're hosting a Thanksgiving feast or searching for the perfect gift for a wine lover this Christmas, our Wine Recommendation System makes it easy to find the best wines tailored to your needs. Simply input your preferences for six key factors:
+Whether you're hosting a Thanksgiving feast or searching for the perfect gift for a wine lover this Christmas, our Cantina Bella makes it easy to find the best wines tailored to your needs. Simply input your preferences for six key factors:
 
 - Alcohol (%)
 - pH Level
